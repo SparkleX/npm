@@ -1,0 +1,28 @@
+{
+  "name": "next-repository",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "npm run clean",
+    "build": "tsc",
+    "clean": "npx rimraf bin",
+    "test": "mocha -r ts-node/register test/**/*Test.ts",
+    "test-dbg": "mocha debug -r ts-node/register test/**/*Test.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "reflect-metadata": "^0.1.13",
+    "typescript": "^3.6.4"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.4",
+    "@types/mocha": "^5.2.7",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2",
+    "rimraf": "^3.0.0",
+	"ts-node": "^8.4.1",
+    "ts-mockito": "^2.5.0"	
+  }
+}

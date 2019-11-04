@@ -1,0 +1,9 @@
+**/.project
+**/.classpath
+**/.settings/
+**/target/
+**/.idea
+**/*.iml
+**/node_modules/
+**/bin/
+**/package-lock.json
