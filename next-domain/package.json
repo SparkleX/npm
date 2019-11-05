@@ -1,0 +1,26 @@
+{
+	"name": "next-domain",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"bin": {
+		"next-domain-builder": "./bin/builder.js"
+	},
+	"scripts": {
+		"all": "run-s build",
+		"prebuild": "npm run clean",
+		"build": "tsc",
+		"clean": "rimraf dist",
+		"test": "mocha -r ts-node/register test/**/*Test.ts",
+		"cover": "nyc --reporter=lcov --reporter=text-summary mocha -r ts-node/register test/**/*Test.ts"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"jsonschema": "^1.2.4",
+		"yargs": "^14.2.0"
+	},
+	"devDependencies": {
+		"handlebars": "^4.5.1"
+	}
+}

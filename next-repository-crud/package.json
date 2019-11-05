@@ -1,21 +1,21 @@
 {
-  "name": "next-repository",
+  "name": "next-repository-crud",
   "version": "0.0.1",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "all": "run-s build cover",
+    "all": "run-s build",
     "prebuild": "npm run clean",
     "build": "tsc",
     "clean": "rimraf dist",
     "test": "mocha -r ts-node/register test/**/*Test.ts",
-    "test-dbg": "mocha debug -r ts-node/register test/**/*Test.ts",
     "cover": "nyc --reporter=lcov --reporter=text-summary mocha -r ts-node/register test/**/*Test.ts"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "reflect-metadata": "^0.1.13",
+    "next-repository": "^0.0.1",
     "typescript": "^3.6.4"
   },
   "devDependencies": {

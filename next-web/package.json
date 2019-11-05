@@ -7,7 +7,7 @@
     "prebuild": "npm run clean",
 	"build": "tsc",
 	"start:dev":"",
-    "clean": "npx rimraf bin"
+    "clean": "rimraf dist"
   },
   "author": "",
   "license": "ISC",
