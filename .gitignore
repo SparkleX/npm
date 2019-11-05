@@ -6,4 +6,6 @@
 **/*.iml
 **/node_modules/
 **/bin/
+**/coverage/
+**/.nyc_output/
 **/package-lock.json

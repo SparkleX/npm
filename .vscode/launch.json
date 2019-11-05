@@ -7,14 +7,14 @@
 		{
 			"type": "node",
 			"request": "launch",
-			"name": "Launch Program",
-			"program": "${workspaceFolder}\\next-repository\\test\\Test.ts",
+			"name": "next-web",
+			"program": "${workspaceFolder}/next-web/server.js",
 			"outFiles": [
 				"${workspaceFolder}/**/*.js"
 			]
 		},
 		{
-			"name": "Current TS Tests File",
+			"name": "next-repository:test",
 			"type": "node",
 			"request": "launch",
 			"cwd": "${workspaceFolder}/next-repository",
