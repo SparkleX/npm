@@ -1,0 +1,25 @@
+{
+	"name": "c1-install",
+	"version": "0.0.1",
+	"description": "",
+	"main": "index.js",
+	"bin": {
+		"c1-create-company": "./bin/CreateCompany.js"
+	},
+	"scripts": {
+		"all": "run-s build",
+		"prebuild": "npm run clean",
+		"build": "tsc",
+		"clean": "rimraf dist",
+		"test": "mocha -r ts-node/register test/**/*Test.ts",
+		"cover": "nyc --reporter=lcov --reporter=text-summary mocha -r ts-node/register test/**/*Test.ts"
+	},
+	"author": "Sun, Xufei",
+	"license": "ISC",
+	"dependencies": {
+		"c1-domain": "0.0.1"
+	},
+	"devDependencies": {
+		
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"$schema": "../schema/domain.json",
+	"name":"ORDR",	
+	"description":"Sales Order",
+	"columns": [
+		{
+			"name":"DocNum",
+			"type":"string"
+		},
+		{
+			"name":"CardCode",
+			"type":"string"
+		},
+		{
+			"name":"DocTotal",
+			"type": "decimal"
+		},
+		{
+			"type": "decimal",
+			"name": "123"
+		},
+		{
+			"name": "asdf",
+			"type": "decimal"
+		}
+	]
+}

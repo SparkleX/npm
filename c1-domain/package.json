@@ -1,0 +1,12 @@
+{
+	"name": "c1-domain",
+	"version": "0.0.1",
+	"description": "",
+	"main": "index.js",
+	"bin": {},
+	"scripts": {},
+	"author": "Sun, Xufei",
+	"license": "ISC",
+	"dependencies": {},
+	"devDependencies": {}
+}
