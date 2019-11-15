@@ -1,3 +1,6 @@
+import { Connection } from "./Connection";
 export interface ConnectionPool {
-	execute(sql:string, params:[any]):Promise<void>;
+	open(config:any):Promise<void>;
+	getConnection():Promise<Connection>;
+	close():Promise<void>;
 }

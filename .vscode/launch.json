@@ -14,12 +14,12 @@
 			]
 		},
 		{
-			"name": "next-repository:test",
+			"name": "test:test",
 			"type": "node",
 			"request": "launch",
-			"cwd": "${workspaceFolder}/next-repository",
-			"program": "${workspaceRoot}/next-repository/node_modules/mocha/bin/_mocha",
-			"args": ["-r", "ts-node/register", "${workspaceFolder}/next-repository/test/**/*Test.ts"],
+			"cwd": "${workspaceFolder}/db-conn-pgsql",
+			"program": "${workspaceRoot}/db-conn-pgsql/node_modules/mocha/bin/_mocha",
+			"args": ["-r", "ts-node/register", "${workspaceFolder}/db-conn-pgsql/test/**/*Test.ts"],
 			"protocol": "inspector"
 		}
 	]
