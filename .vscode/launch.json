@@ -17,9 +17,9 @@
 			"name": "test:test",
 			"type": "node",
 			"request": "launch",
-			"cwd": "${workspaceFolder}/db-conn-pgsql",
-			"program": "${workspaceRoot}/db-conn-pgsql/node_modules/mocha/bin/_mocha",
-			"args": ["-r", "ts-node/register", "${workspaceFolder}/db-conn-pgsql/test/**/*Test.ts"],
+			"cwd": "${workspaceFolder}/db-conn-hana",
+			"program": "${workspaceRoot}/db-conn-hana/node_modules/mocha/bin/_mocha",
+			"args": ["-r", "ts-node/register", "${workspaceFolder}/db-conn-hana/test/HanaConnectionPromiseTest.ts"],
 			"protocol": "inspector"
 		}
 	]

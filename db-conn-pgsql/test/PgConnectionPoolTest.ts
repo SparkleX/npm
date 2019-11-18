@@ -1,9 +1,7 @@
 import {ConnectionPool, Connection} from "db-conn"
 import {PgConnectionPool} from "../src/index"
-import {sqlTest} from "./TestCase"
+import {sqlTest, transactionTest} from "./TestCase"
 import {describe,it} from "mocha"
-import {expect} from 'chai'
-import {mock, instance,verify,deepEqual, when} from "ts-mockito"
 
 describe(__filename, () => {
     it(__filename, async () => {
@@ -21,6 +19,7 @@ describe(__filename, () => {
 		var conn1:Connection = await pool.getConnection();
 		await sqlTest(conn0);
 		await sqlTest(conn1);
+		await transactionTest(conn0);
 		await conn0.close();
 		await conn1.close();
 		await pool.close();

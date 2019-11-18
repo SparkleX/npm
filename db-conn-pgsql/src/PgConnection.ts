@@ -1,16 +1,17 @@
 import { Connection, Result } from 'db-conn';
 import { Client } from 'pg';
 export class PgConnection implements Connection{
-	conn: any;
+	private client: any;
 	public constructor(conn?:any) {
-		this.conn = conn;
+		this.client = conn;
 	}
 	public async open(config:any) : Promise<void> {
-		this.conn = new Client(config);
-        await this.conn.connect();
+		this.client = new Client(config);
+        await this.client.connect();
 	}
 	public async execute(sql: string, params?: [any]): Promise<Result> {
-		var result = await this.conn.query(sql, params);
+		console.log(`PgConnection.execute: ${sql}`);
+		var result = await this.client.query(sql, params);
 		let rt:Result = new Result();
 		//console.dir(result);
 		if(result.rowCount!=null) {
@@ -20,13 +21,23 @@ export class PgConnection implements Connection{
 		return rt;
 	}
 	public async close():Promise<void> {
-		if(this.conn.release) {
-			await this.conn.release();
+		if(this.client.release) {
+			await this.client.release();
 		}
 		else {
-			await this.conn.end();	
+			await this.client.end();	
 		}
 	}
-
+	async setAutoCommit(autoCommit:boolean): Promise<void> {
+		if(autoCommit==false) {
+			await this.client.query('BEGIN');
+		}
+	}
+	async commit(): Promise<void> {
+		await this.client.query('COMMIT');
+	}
+	async rollback(): Promise<void> {
+		await this.client.query('ROLLBACK')
+	}
 
 }
