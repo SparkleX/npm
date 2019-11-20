@@ -4,7 +4,7 @@
 	"description": "db-conn implementation of Progress",
 	"main": "dist/index.js",
 	"scripts": {
-		"all": "run-s build",
+		"all": "run-s build cover",
 		"prebuild": "npm run clean",
 		"build": "tsc",
 		"clean": "rimraf dist",

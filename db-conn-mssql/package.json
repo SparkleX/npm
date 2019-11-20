@@ -4,7 +4,7 @@
 	"description": "db-conn implementation of Microsoft SQL Server ",
 	"main": "dist/index.js",
 	"scripts": {
-		"all": "run-s build",
+		"all": "run-s build cover",
 		"prebuild": "npm run clean",
 		"build": "tsc",
 		"clean": "rimraf dist",
@@ -20,6 +20,7 @@
 	"devDependencies": {
 		"@types/chai": "^4.2.4",
 		"@types/mocha": "^5.2.7",
+		"@types/mssql": "^4.3.1",
 		"chai": "^4.2.0",
 		"mocha": "^6.2.2",
 		"npm-run-all": "^4.1.5",

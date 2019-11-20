@@ -17,9 +17,9 @@
 			"name": "test:test",
 			"type": "node",
 			"request": "launch",
-			"cwd": "${workspaceFolder}/db-conn-hana",
-			"program": "${workspaceRoot}/db-conn-hana/node_modules/mocha/bin/_mocha",
-			"args": ["-r", "ts-node/register", "${workspaceFolder}/db-conn-hana/test/HanaConnectionPromiseTest.ts"],
+			"cwd": "${workspaceFolder}/db-conn-mssql",
+			"program": "${workspaceRoot}/db-conn-mssql/node_modules/mocha/bin/_mocha",
+			"args": ["-r", "ts-node/register", "${workspaceFolder}/db-conn-mssql/test/MSSQLConnectionTest.ts"],
 			"protocol": "inspector"
 		}
 	]
